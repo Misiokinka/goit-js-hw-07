@@ -30,13 +30,8 @@ if (typeof document !== 'undefined') {
   list.style.display = 'flex';
   list.style.gap = '24px';
 
-  images.forEach(imageItem => {
-    const listItem = document.createElement('li');
-    const image = document.createElement('img');
-    image.src = imageItem.url;
-    image.alt = imageItem.alt;
-    image.style.width = '100%';
-    listItem.append(image);
-    list.append(listItem);
-  });
+  const newList = images
+    .map(item => `<li><img src=${item.url} alt=${item.url} width="100%"/></li>`)
+    .join('');
+  list.innerHTML = newList;
 }

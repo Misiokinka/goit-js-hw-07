@@ -3,8 +3,9 @@ if (typeof document !== 'undefined') {
   const color = document.querySelector('.color');
 
   btn.addEventListener('click', () => {
-    color.textContent = getRandomHexColor();
-    document.body.style.backgroundColor = getRandomHexColor();
+    const randomColor = getRandomHexColor();
+    color.textContent = randomColor;
+    document.body.style.backgroundColor = randomColor;
   });
 
   function getRandomHexColor() {
