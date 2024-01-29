@@ -31,7 +31,7 @@ if (typeof document !== 'undefined') {
   list.style.gap = '24px';
 
   const newList = images
-    .map(item => `<li><img src=${item.url} alt=${item.url} width="100%"/></li>`)
+    .map(item => `<li><img src=${item.url} alt=${item.alt} width="100%"/></li>`)
     .join('');
   list.innerHTML = newList;
 }
